@@ -1,0 +1,14 @@
+{
+  "name": "ut-api-js-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://leoiii12@bitbucket.org/diamond-queen/ut-api-js-services.git"
+  },
+  "author": "UniTime"
+}
