@@ -17,6 +17,8 @@ export interface InstitutionDto {
 
     chineseName?: string;
 
+    emailSuffixes?: Array<string>;
+
     id?: number;
 
 }
