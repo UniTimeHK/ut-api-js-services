@@ -24,6 +24,8 @@ export * from './InstitutionApi';
 import { InstitutionApi } from './InstitutionApi';
 export * from './LocationApi';
 import { LocationApi } from './LocationApi';
+export * from './NotificationApi';
+import { NotificationApi } from './NotificationApi';
 export * from './RatingApi';
 import { RatingApi } from './RatingApi';
 export * from './RelationshipApi';
@@ -44,5 +46,5 @@ export * from './UserApi';
 import { UserApi } from './UserApi';
 export * from './VotingApi';
 import { VotingApi } from './VotingApi';
-export var APIS = [AccountApi, ActivityApi, ActivityInvitationApi, ChatRoomApi, ChatRoomMessageApi, CommentApi, ConfigurationApi, DescriptionApi, EmailTemplateApi, FriendInvitationApi, ImageApi, InstitutionApi, LocationApi, RatingApi, RelationshipApi, ReplyApi, RoleApi, SessionApi, TagApi, TenantApi, TokenAuthApi, UserApi, VotingApi];
+export var APIS = [AccountApi, ActivityApi, ActivityInvitationApi, ChatRoomApi, ChatRoomMessageApi, CommentApi, ConfigurationApi, DescriptionApi, EmailTemplateApi, FriendInvitationApi, ImageApi, InstitutionApi, LocationApi, NotificationApi, RatingApi, RelationshipApi, ReplyApi, RoleApi, SessionApi, TagApi, TenantApi, TokenAuthApi, UserApi, VotingApi];
 //# sourceMappingURL=api.js.map

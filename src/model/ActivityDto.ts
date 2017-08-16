@@ -31,11 +31,13 @@ export interface ActivityDto {
 
     location?: models.LocationDto;
 
-    tags?: Array<models.TagDto>;
-
     ratings?: Array<models.RatingDto>;
 
     comments?: Array<models.CommentDto>;
+
+    tags?: Array<models.TagDto>;
+
+    bookmarkingUsers?: Array<models.BookmarkingUserListDto>;
 
     owner?: models.UserListDto;
 

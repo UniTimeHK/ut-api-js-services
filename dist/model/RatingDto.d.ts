@@ -19,6 +19,5 @@ export declare namespace RatingDto {
     enum RatingStatusEnum {
         NUMBER_0,
         NUMBER_1,
-        NUMBER_2,
     }
 }

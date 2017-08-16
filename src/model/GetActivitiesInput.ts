@@ -13,6 +13,8 @@
 import * as models from './models';
 
 export interface GetActivitiesInput {
+    isBookmarked?: boolean;
+
     maxResultCount?: number;
 
     skipCount?: number;

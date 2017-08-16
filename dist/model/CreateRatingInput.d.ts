@@ -8,6 +8,5 @@ export declare namespace CreateRatingInput {
     enum RatingStatusEnum {
         NUMBER_0,
         NUMBER_1,
-        NUMBER_2,
     }
 }

@@ -1,4 +1,5 @@
 export interface GetActivitiesInput {
+    isBookmarked?: boolean;
     maxResultCount?: number;
     skipCount?: number;
     queryKeywords?: string;

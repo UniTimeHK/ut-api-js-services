@@ -15,7 +15,6 @@ export var RatingDto;
     (function (RatingStatusEnum) {
         RatingStatusEnum[RatingStatusEnum["NUMBER_0"] = 0] = "NUMBER_0";
         RatingStatusEnum[RatingStatusEnum["NUMBER_1"] = 1] = "NUMBER_1";
-        RatingStatusEnum[RatingStatusEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(RatingStatusEnum = RatingDto.RatingStatusEnum || (RatingDto.RatingStatusEnum = {}));
 })(RatingDto || (RatingDto = {}));
 //# sourceMappingURL=RatingDto.js.map

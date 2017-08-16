@@ -47,7 +47,6 @@ export interface ActivityListDto {
 export namespace ActivityListDto {
     export enum MyRatingStatusEnum {
         NUMBER_0 = <any> 0,
-        NUMBER_1 = <any> 1,
-        NUMBER_2 = <any> 2
+        NUMBER_1 = <any> 1
     }
 }

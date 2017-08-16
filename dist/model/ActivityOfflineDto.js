@@ -15,7 +15,6 @@ export var ActivityOfflineDto;
     (function (MyRatingStatusEnum) {
         MyRatingStatusEnum[MyRatingStatusEnum["NUMBER_0"] = 0] = "NUMBER_0";
         MyRatingStatusEnum[MyRatingStatusEnum["NUMBER_1"] = 1] = "NUMBER_1";
-        MyRatingStatusEnum[MyRatingStatusEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(MyRatingStatusEnum = ActivityOfflineDto.MyRatingStatusEnum || (ActivityOfflineDto.MyRatingStatusEnum = {}));
 })(ActivityOfflineDto || (ActivityOfflineDto = {}));
 //# sourceMappingURL=ActivityOfflineDto.js.map

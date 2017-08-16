@@ -45,6 +45,21 @@ export class ActivityApi {
      * 
      * @param input 
      */
+    public bookmarkActivity(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<{}> {
+        return this.bookmarkActivityWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
     public createActivity(input?: models.CreateActivityInput, extraHttpRequestParams?: any): Observable<models.EntityDtoGuid> {
         return this.createActivityWithHttpInfo(input, extraHttpRequestParams)
             .map((response: Response) => {
@@ -150,6 +165,21 @@ export class ActivityApi {
      * 
      * @param input 
      */
+    public unbookmarkActivity(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<{}> {
+        return this.unbookmarkActivityWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
     public updateActivity(input?: models.UpdateActivityInput, extraHttpRequestParams?: any): Observable<{}> {
         return this.updateActivityWithHttpInfo(input, extraHttpRequestParams)
             .map((response: Response) => {
@@ -161,6 +191,44 @@ export class ActivityApi {
             });
     }
 
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public bookmarkActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Activity/BookmarkActivity';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
 
     /**
      * 
@@ -415,6 +483,44 @@ export class ActivityApi {
      */
     public removeActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
         const path = this.basePath + '/api/services/app/Activity/RemoveActivity';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public unbookmarkActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Activity/UnbookmarkActivity';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845

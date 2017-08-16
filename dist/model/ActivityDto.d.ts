@@ -20,9 +20,10 @@ export interface ActivityDto {
     name?: string;
     descriptions?: Array<models.DescriptionDto>;
     location?: models.LocationDto;
-    tags?: Array<models.TagDto>;
     ratings?: Array<models.RatingDto>;
     comments?: Array<models.CommentDto>;
+    tags?: Array<models.TagDto>;
+    bookmarkingUsers?: Array<models.BookmarkingUserListDto>;
     owner?: models.UserListDto;
     id?: string;
 }

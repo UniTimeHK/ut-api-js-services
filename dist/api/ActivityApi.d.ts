@@ -14,6 +14,11 @@ export declare class ActivityApi {
      *
      * @param input
      */
+    bookmarkActivity(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     * @param input
+     */
     createActivity(input?: models.CreateActivityInput, extraHttpRequestParams?: any): Observable<models.EntityDtoGuid>;
     /**
      *
@@ -49,7 +54,18 @@ export declare class ActivityApi {
      *
      * @param input
      */
+    unbookmarkActivity(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     * @param input
+     */
     updateActivity(input?: models.UpdateActivityInput, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     *
+     * @param input
+     */
+    bookmarkActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *
@@ -92,6 +108,12 @@ export declare class ActivityApi {
      * @param input
      */
     removeActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    unbookmarkActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *

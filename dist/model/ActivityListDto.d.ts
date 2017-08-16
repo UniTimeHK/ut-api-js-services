@@ -31,6 +31,5 @@ export declare namespace ActivityListDto {
     enum MyRatingStatusEnum {
         NUMBER_0,
         NUMBER_1,
-        NUMBER_2,
     }
 }
