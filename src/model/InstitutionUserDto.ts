@@ -12,17 +12,15 @@
 
 import * as models from './models';
 
-export interface MyInstitutionDto {
-    name?: string;
+export interface InstitutionUserDto {
+    institutionId?: number;
 
-    chineseName?: string;
+    institutionName?: string;
 
-    id?: number;
+    institutionChineseName?: string;
+
+    user?: models.UserListDto;
 
     major?: string;
-
-    isValidated?: boolean;
-
-    emailAddress?: string;
 
 }

@@ -22,6 +22,11 @@ export declare class InstitutionApi {
     createInstitution(input?: models.CreateInstitutionInput, extraHttpRequestParams?: any): Observable<models.EntityDtoInt64>;
     /**
      *
+     * @param input
+     */
+    getCollegemates(input?: models.GetCollegematesInput, extraHttpRequestParams?: any): Observable<models.GetCollegematesOutput>;
+    /**
+     *
      */
     getInstitutions(extraHttpRequestParams?: any): Observable<models.GetInstitutionsOutput>;
     /**
@@ -70,6 +75,12 @@ export declare class InstitutionApi {
      * @param input
      */
     createInstitutionWithHttpInfo(input?: models.CreateInstitutionInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getCollegematesWithHttpInfo(input?: models.GetCollegematesInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *

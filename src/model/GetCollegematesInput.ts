@@ -12,17 +12,9 @@
 
 import * as models from './models';
 
-export interface MyInstitutionDto {
-    name?: string;
+export interface GetCollegematesInput {
+    maxResultCount?: number;
 
-    chineseName?: string;
-
-    id?: number;
-
-    major?: string;
-
-    isValidated?: boolean;
-
-    emailAddress?: string;
+    skipCount?: number;
 
 }

@@ -12,17 +12,7 @@
 
 import * as models from './models';
 
-export interface MyInstitutionDto {
-    name?: string;
-
-    chineseName?: string;
-
-    id?: number;
-
-    major?: string;
-
-    isValidated?: boolean;
-
-    emailAddress?: string;
+export interface GetCollegematesOutput {
+    collegemates?: Array<models.InstitutionUserDto>;
 
 }
