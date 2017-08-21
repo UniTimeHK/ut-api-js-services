@@ -49,6 +49,11 @@ export declare class ActivityApi {
      *
      * @param input
      */
+    getWorldActivities(input?: models.GetWorldActivitiesInput, extraHttpRequestParams?: any): Observable<models.GetWorldActivitiesOutput>;
+    /**
+     *
+     * @param input
+     */
     removeActivity(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<{}>;
     /**
      *
@@ -102,6 +107,12 @@ export declare class ActivityApi {
      * @param input
      */
     getMyActivityIdsWithHttpInfo(input?: models.GetMyActivityIdsInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getWorldActivitiesWithHttpInfo(input?: models.GetWorldActivitiesInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *

@@ -12,13 +12,9 @@
 
 import * as models from './models';
 
-export interface EmailTemplateDto {
-    name?: string;
+export interface GetWorldActivitiesInput {
+    maxResultCount?: number;
 
-    subject?: string;
-
-    content?: string;
-
-    id?: number;
+    skipCount?: number;
 
 }

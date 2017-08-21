@@ -9,4 +9,13 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+export var GetCollegematesInput;
+(function (GetCollegematesInput) {
+    var GenderEnum;
+    (function (GenderEnum) {
+        GenderEnum[GenderEnum["NUMBER_1"] = 1] = "NUMBER_1";
+        GenderEnum[GenderEnum["NUMBER_2"] = 2] = "NUMBER_2";
+        GenderEnum[GenderEnum["NUMBER_3"] = 3] = "NUMBER_3";
+    })(GenderEnum = GetCollegematesInput.GenderEnum || (GetCollegematesInput.GenderEnum = {}));
+})(GetCollegematesInput || (GetCollegematesInput = {}));
 //# sourceMappingURL=GetCollegematesInput.js.map

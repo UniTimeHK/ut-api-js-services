@@ -11,6 +11,7 @@ export * from './CreateActivityInput';
 export * from './CreateRatingInput';
 export * from './DescriptionDto';
 export * from './FriendInvitationDto';
+export * from './GetCollegematesInput';
 export * from './IsTenantAvailableOutput';
 export * from './MyUserDto';
 export * from './RatingDto';

@@ -17,7 +17,7 @@ export interface ChatRoomMessageDto {
 
     replyingMessage?: models.ChatRoomMessageListDto;
 
-    data?: models.ChatRoomMessageData;
+    data?: models.Data;
 
     type?: ChatRoomMessageDto.TypeEnum;
 

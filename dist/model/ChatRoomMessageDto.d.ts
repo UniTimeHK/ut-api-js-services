@@ -13,7 +13,7 @@ import * as models from './models';
 export interface ChatRoomMessageDto {
     content?: string;
     replyingMessage?: models.ChatRoomMessageListDto;
-    data?: models.ChatRoomMessageData;
+    data?: models.Data;
     type?: ChatRoomMessageDto.TypeEnum;
     ownerId?: number;
     creationTime?: string;
