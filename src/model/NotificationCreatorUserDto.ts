@@ -12,17 +12,11 @@
 
 import * as models from './models';
 
-export interface NotificationDto {
-    creatorUser?: models.NotificationCreatorUserDto;
-
-    content?: string;
-
-    heading?: string;
-
-    data?: { [key: string]: string; };
-
-    hasRead?: boolean;
-
+export interface NotificationCreatorUserDto {
     id?: number;
+
+    userName?: string;
+
+    iconId?: string;
 
 }

@@ -14,6 +14,11 @@ export declare class ActivityApi {
      *
      * @param input
      */
+    addImagesToActivity(input?: models.AddImagesToActivityInput, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     * @param input
+     */
     bookmarkActivity(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<{}>;
     /**
      *
@@ -65,6 +70,12 @@ export declare class ActivityApi {
      * @param input
      */
     updateActivity(input?: models.UpdateActivityInput, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     *
+     * @param input
+     */
+    addImagesToActivityWithHttpInfo(input?: models.AddImagesToActivityInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *

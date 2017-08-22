@@ -12,17 +12,9 @@
 
 import * as models from './models';
 
-export interface NotificationDto {
-    creatorUser?: models.NotificationCreatorUserDto;
+export interface AddImagesToActivityInput {
+    activityId: string;
 
-    content?: string;
-
-    heading?: string;
-
-    data?: { [key: string]: string; };
-
-    hasRead?: boolean;
-
-    id?: number;
+    imageIds?: Array<string>;
 
 }
