@@ -35,6 +35,8 @@ export interface ActivityListDto {
 
     myRatingStatus?: ActivityListDto.MyRatingStatusEnum;
 
+    isBookmarked?: boolean;
+
     numberOfLikes?: number;
 
     numberOfDislikes?: number;

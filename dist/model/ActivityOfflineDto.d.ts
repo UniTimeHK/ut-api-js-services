@@ -20,6 +20,7 @@ export interface ActivityOfflineDto {
     endTime?: string;
     isAllDay?: boolean;
     myRatingStatus?: ActivityOfflineDto.MyRatingStatusEnum;
+    isBookmarked?: boolean;
     numberOfLikes?: number;
     numberOfDislikes?: number;
     numberOfComments?: number;

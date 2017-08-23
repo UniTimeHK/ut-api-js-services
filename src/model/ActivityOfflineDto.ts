@@ -31,6 +31,8 @@ export interface ActivityOfflineDto {
 
     myRatingStatus?: ActivityOfflineDto.MyRatingStatusEnum;
 
+    isBookmarked?: boolean;
+
     numberOfLikes?: number;
 
     numberOfDislikes?: number;

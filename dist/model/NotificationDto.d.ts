@@ -18,5 +18,6 @@ export interface NotificationDto {
         [key: string]: string;
     };
     hasRead?: boolean;
+    creationTime?: string;
     id?: number;
 }

@@ -23,6 +23,8 @@ export interface NotificationDto {
 
     hasRead?: boolean;
 
+    creationTime?: string;
+
     id?: number;
 
 }

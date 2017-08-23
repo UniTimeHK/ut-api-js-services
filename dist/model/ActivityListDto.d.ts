@@ -22,6 +22,7 @@ export interface ActivityListDto {
     coverImageDescription?: models.DescriptionDto;
     coverTextDescription?: models.DescriptionDto;
     myRatingStatus?: ActivityListDto.MyRatingStatusEnum;
+    isBookmarked?: boolean;
     numberOfLikes?: number;
     numberOfDislikes?: number;
     numberOfComments?: number;
