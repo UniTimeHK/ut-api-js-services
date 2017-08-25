@@ -13,6 +13,8 @@
 import * as models from './models';
 
 export interface ActivityInvitationDto {
+    activity?: models.ActivityListDto;
+
     content?: string;
 
     status?: ActivityInvitationDto.StatusEnum;
