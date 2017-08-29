@@ -28,7 +28,7 @@ import { Configuration }                                     from '../configurat
 @Injectable()
 export class SessionApi {
 
-    protected basePath = 'https://ut-dev-api.azurewebsites.net';
+    protected basePath = 'https://api.unitime.hk';
     public defaultHeaders: Headers = new Headers();
     public configuration: Configuration = new Configuration();
 

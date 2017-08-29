@@ -19,7 +19,7 @@ import { Configuration } from '../configuration';
 var ImageApi = (function () {
     function ImageApi(http, basePath, configuration) {
         this.http = http;
-        this.basePath = 'https://ut-dev-api.azurewebsites.net';
+        this.basePath = 'https://api.unitime.hk';
         this.defaultHeaders = new Headers();
         this.configuration = new Configuration();
         if (basePath) {
