@@ -1,5 +1,5 @@
 export interface BookmarkingUserListDto {
-    id?: string;
+    id?: number;
     userName?: string;
     iconId?: string;
     nickname?: string;

@@ -13,7 +13,7 @@
 import * as models from './models';
 
 export interface BookmarkingUserListDto {
-    id?: string;
+    id?: number;
 
     userName?: string;
 
