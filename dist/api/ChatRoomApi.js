@@ -62,6 +62,21 @@ var ChatRoomApi = (function () {
      *
      * @param input
      */
+    ChatRoomApi.prototype.quitChatRoom = function (input, extraHttpRequestParams) {
+        return this.quitChatRoomWithHttpInfo(input, extraHttpRequestParams)
+            .map(function (response) {
+            if (response.status === 204) {
+                return undefined;
+            }
+            else {
+                return response.json() || {};
+            }
+        });
+    };
+    /**
+     *
+     * @param input
+     */
     ChatRoomApi.prototype.updateChatRoom = function (input, extraHttpRequestParams) {
         return this.updateChatRoomWithHttpInfo(input, extraHttpRequestParams)
             .map(function (response) {
@@ -127,6 +142,37 @@ var ChatRoomApi = (function () {
         var requestOptions = new RequestOptions({
             method: RequestMethod.Post,
             headers: headers,
+            search: queryParameters,
+            withCredentials: this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
+        }
+        return this.http.request(path, requestOptions);
+    };
+    /**
+     *
+     *
+     * @param input
+     */
+    ChatRoomApi.prototype.quitChatRoomWithHttpInfo = function (input, extraHttpRequestParams) {
+        var path = this.basePath + '/api/services/app/ChatRoom/QuitChatRoom';
+        var queryParameters = new URLSearchParams();
+        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        var consumes = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+        // to determine the Accept header
+        var produces = [];
+        headers.set('Content-Type', 'application/json');
+        var requestOptions = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input),
             search: queryParameters,
             withCredentials: this.configuration.withCredentials
         });

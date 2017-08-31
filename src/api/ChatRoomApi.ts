@@ -74,6 +74,21 @@ export class ChatRoomApi {
      * 
      * @param input 
      */
+    public quitChatRoom(input?: models.QuitChatRoomInput, extraHttpRequestParams?: any): Observable<{}> {
+        return this.quitChatRoomWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
     public updateChatRoom(input?: models.UpdateChatRoomInput, extraHttpRequestParams?: any): Observable<{}> {
         return this.updateChatRoomWithHttpInfo(input, extraHttpRequestParams)
             .map((response: Response) => {
@@ -150,6 +165,44 @@ export class ChatRoomApi {
         let requestOptions: RequestOptionsArgs = new RequestOptions({
             method: RequestMethod.Post,
             headers: headers,
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public quitChatRoomWithHttpInfo(input?: models.QuitChatRoomInput, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/ChatRoom/QuitChatRoom';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
             search: queryParameters,
             withCredentials:this.configuration.withCredentials
         });

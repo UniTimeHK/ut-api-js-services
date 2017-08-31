@@ -23,6 +23,11 @@ export declare class ChatRoomApi {
      *
      * @param input
      */
+    quitChatRoom(input?: models.QuitChatRoomInput, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     * @param input
+     */
     updateChatRoom(input?: models.UpdateChatRoomInput, extraHttpRequestParams?: any): Observable<{}>;
     /**
      *
@@ -35,6 +40,12 @@ export declare class ChatRoomApi {
      *
      */
     getMyChatRoomsWithHttpInfo(extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    quitChatRoomWithHttpInfo(input?: models.QuitChatRoomInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *

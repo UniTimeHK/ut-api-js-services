@@ -22,6 +22,11 @@ export declare class LocationApi {
     getLocations(input?: models.GetLocationsInput, extraHttpRequestParams?: any): Observable<models.GetLocationsOutput>;
     /**
      *
+     * @param input
+     */
+    getPlaces(input?: models.GetPlacesInput, extraHttpRequestParams?: any): Observable<models.GetPlacesOutput>;
+    /**
+     *
      *
      * @param input
      */
@@ -32,4 +37,10 @@ export declare class LocationApi {
      * @param input
      */
     getLocationsWithHttpInfo(input?: models.GetLocationsInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getPlacesWithHttpInfo(input?: models.GetPlacesInput, extraHttpRequestParams?: any): Observable<Response>;
 }
