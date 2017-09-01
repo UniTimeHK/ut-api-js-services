@@ -48,6 +48,21 @@ var LocationApi = (function () {
      *
      * @param input
      */
+    LocationApi.prototype.geocodePlace = function (input, extraHttpRequestParams) {
+        return this.geocodePlaceWithHttpInfo(input, extraHttpRequestParams)
+            .map(function (response) {
+            if (response.status === 204) {
+                return undefined;
+            }
+            else {
+                return response.json() || {};
+            }
+        });
+    };
+    /**
+     *
+     * @param input
+     */
     LocationApi.prototype.getLocations = function (input, extraHttpRequestParams) {
         return this.getLocationsWithHttpInfo(input, extraHttpRequestParams)
             .map(function (response) {
@@ -81,6 +96,41 @@ var LocationApi = (function () {
      */
     LocationApi.prototype.createLocationWithHttpInfo = function (input, extraHttpRequestParams) {
         var path = this.basePath + '/api/services/app/Location/CreateLocation';
+        var queryParameters = new URLSearchParams();
+        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        var consumes = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+        // to determine the Accept header
+        var produces = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+        headers.set('Content-Type', 'application/json');
+        var requestOptions = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input),
+            search: queryParameters,
+            withCredentials: this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
+        }
+        return this.http.request(path, requestOptions);
+    };
+    /**
+     *
+     *
+     * @param input
+     */
+    LocationApi.prototype.geocodePlaceWithHttpInfo = function (input, extraHttpRequestParams) {
+        var path = this.basePath + '/api/services/app/Location/GeocodePlace';
         var queryParameters = new URLSearchParams();
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header

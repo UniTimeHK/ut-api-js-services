@@ -12,13 +12,9 @@
 
 import * as models from './models';
 
-export interface PlaceDto {
-    address?: string;
-
+export interface GeocodePlaceOutput {
     latitude?: number;
 
     longitute?: number;
-
-    id?: string;
 
 }

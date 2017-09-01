@@ -53,6 +53,7 @@ export * from './ExternalAuthenticateResultModel';
 export * from './ExternalLoginProviderInfoModel';
 export * from './FileDto';
 export * from './FriendInvitationDto';
+export * from './GeocodePlaceOutput';
 export * from './GetActivitiesInput';
 export * from './GetActivitiesOutput';
 export * from './GetActivityInvitationsOutput';

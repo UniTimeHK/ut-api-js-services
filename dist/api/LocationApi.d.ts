@@ -19,6 +19,11 @@ export declare class LocationApi {
      *
      * @param input
      */
+    geocodePlace(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GeocodePlaceOutput>;
+    /**
+     *
+     * @param input
+     */
     getLocations(input?: models.GetLocationsInput, extraHttpRequestParams?: any): Observable<models.GetLocationsOutput>;
     /**
      *
@@ -31,6 +36,12 @@ export declare class LocationApi {
      * @param input
      */
     createLocationWithHttpInfo(input?: models.CreateLocationInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    geocodePlaceWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *
