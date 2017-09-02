@@ -84,6 +84,8 @@ export * from './GetMyInstitutionsOutput';
 export * from './GetMyNotificationsInput';
 export * from './GetMyNotificationsOutput';
 export * from './GetMyUserOutput';
+export * from './GetPlaceInput';
+export * from './GetPlaceOutput';
 export * from './GetPlacesInput';
 export * from './GetPlacesOutput';
 export * from './GetRatingsOutput';
