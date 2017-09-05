@@ -15,6 +15,6 @@ import * as models from './models';
 export interface GeocodePlaceOutput {
     latitude?: number;
 
-    longitute?: number;
+    longitude?: number;
 
 }

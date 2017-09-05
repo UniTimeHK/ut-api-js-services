@@ -3,6 +3,7 @@ export interface CreateActivityInput {
     endTime?: string;
     isAllDay?: boolean;
     privacy?: CreateActivityInput.PrivacyEnum;
+    votingId?: string;
     name: string;
     locationId?: string;
     tagTexts: Array<string>;

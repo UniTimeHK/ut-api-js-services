@@ -21,6 +21,8 @@ export interface CreateActivityInput {
 
     privacy?: CreateActivityInput.PrivacyEnum;
 
+    votingId?: string;
+
     name: string;
 
     locationId?: string;

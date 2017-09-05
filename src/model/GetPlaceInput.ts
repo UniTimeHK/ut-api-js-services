@@ -15,6 +15,6 @@ import * as models from './models';
 export interface GetPlaceInput {
     latitude: number;
 
-    longitute: number;
+    longitude: number;
 
 }
