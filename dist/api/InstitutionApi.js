@@ -61,21 +61,6 @@ var InstitutionApi = (function () {
     };
     /**
      *
-     * @param input
-     */
-    InstitutionApi.prototype.getCollegemates = function (input, extraHttpRequestParams) {
-        return this.getCollegematesWithHttpInfo(input, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json() || {};
-            }
-        });
-    };
-    /**
-     *
      */
     InstitutionApi.prototype.getInstitutions = function (extraHttpRequestParams) {
         return this.getInstitutionsWithHttpInfo(extraHttpRequestParams)
@@ -105,9 +90,40 @@ var InstitutionApi = (function () {
     };
     /**
      *
+     * @param input
      */
-    InstitutionApi.prototype.getMyInstitutions = function (extraHttpRequestParams) {
-        return this.getMyInstitutionsWithHttpInfo(extraHttpRequestParams)
+    InstitutionApi.prototype.getMyCollegemates = function (input, extraHttpRequestParams) {
+        return this.getMyCollegematesWithHttpInfo(input, extraHttpRequestParams)
+            .map(function (response) {
+            if (response.status === 204) {
+                return undefined;
+            }
+            else {
+                return response.json() || {};
+            }
+        });
+    };
+    /**
+     *
+     * @param input
+     */
+    InstitutionApi.prototype.getOrganisations = function (input, extraHttpRequestParams) {
+        return this.getOrganisationsWithHttpInfo(input, extraHttpRequestParams)
+            .map(function (response) {
+            if (response.status === 204) {
+                return undefined;
+            }
+            else {
+                return response.json() || {};
+            }
+        });
+    };
+    /**
+     *
+     * @param input
+     */
+    InstitutionApi.prototype.getUserInstitutions = function (input, extraHttpRequestParams) {
+        return this.getUserInstitutionsWithHttpInfo(input, extraHttpRequestParams)
             .map(function (response) {
             if (response.status === 204) {
                 return undefined;
@@ -261,41 +277,6 @@ var InstitutionApi = (function () {
     /**
      *
      *
-     * @param input
-     */
-    InstitutionApi.prototype.getCollegematesWithHttpInfo = function (input, extraHttpRequestParams) {
-        var path = this.basePath + '/api/services/app/Institution/GetCollegemates';
-        var queryParameters = new URLSearchParams();
-        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // to determine the Content-Type header
-        var consumes = [
-            'application/json',
-            'text/json',
-            'application/json-patch+json'
-        ];
-        // to determine the Accept header
-        var produces = [
-            'application/json',
-            'text/json',
-            'text/plain'
-        ];
-        headers.set('Content-Type', 'application/json');
-        var requestOptions = new RequestOptions({
-            method: RequestMethod.Post,
-            headers: headers,
-            body: input == null ? '' : JSON.stringify(input),
-            search: queryParameters,
-            withCredentials: this.configuration.withCredentials
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     *
-     *
      */
     InstitutionApi.prototype.getInstitutionsWithHttpInfo = function (extraHttpRequestParams) {
         var path = this.basePath + '/api/services/app/Institution/GetInstitutions';
@@ -359,22 +340,99 @@ var InstitutionApi = (function () {
     /**
      *
      *
+     * @param input
      */
-    InstitutionApi.prototype.getMyInstitutionsWithHttpInfo = function (extraHttpRequestParams) {
-        var path = this.basePath + '/api/services/app/Institution/GetMyInstitutions';
+    InstitutionApi.prototype.getMyCollegematesWithHttpInfo = function (input, extraHttpRequestParams) {
+        var path = this.basePath + '/api/services/app/Institution/GetMyCollegemates';
         var queryParameters = new URLSearchParams();
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header
-        var consumes = [];
+        var consumes = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
         // to determine the Accept header
         var produces = [
             'application/json',
             'text/json',
             'text/plain'
         ];
+        headers.set('Content-Type', 'application/json');
         var requestOptions = new RequestOptions({
             method: RequestMethod.Post,
             headers: headers,
+            body: input == null ? '' : JSON.stringify(input),
+            search: queryParameters,
+            withCredentials: this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
+        }
+        return this.http.request(path, requestOptions);
+    };
+    /**
+     *
+     *
+     * @param input
+     */
+    InstitutionApi.prototype.getOrganisationsWithHttpInfo = function (input, extraHttpRequestParams) {
+        var path = this.basePath + '/api/services/app/Institution/GetOrganisations';
+        var queryParameters = new URLSearchParams();
+        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        var consumes = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+        // to determine the Accept header
+        var produces = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+        headers.set('Content-Type', 'application/json');
+        var requestOptions = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input),
+            search: queryParameters,
+            withCredentials: this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
+        }
+        return this.http.request(path, requestOptions);
+    };
+    /**
+     *
+     *
+     * @param input
+     */
+    InstitutionApi.prototype.getUserInstitutionsWithHttpInfo = function (input, extraHttpRequestParams) {
+        var path = this.basePath + '/api/services/app/Institution/GetUserInstitutions';
+        var queryParameters = new URLSearchParams();
+        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        var consumes = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+        // to determine the Accept header
+        var produces = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+        headers.set('Content-Type', 'application/json');
+        var requestOptions = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input),
             search: queryParameters,
             withCredentials: this.configuration.withCredentials
         });

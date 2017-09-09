@@ -9,4 +9,7 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-//# sourceMappingURL=GetCollegematesOutput.js.map
+import * as models from './models';
+export interface GetMyCollegematesOutput {
+    collegemates?: Array<models.InstitutionUserDto>;
+}

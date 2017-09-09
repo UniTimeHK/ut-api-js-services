@@ -9,4 +9,4 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-//# sourceMappingURL=GetMyInstitutionsOutput.js.map
+//# sourceMappingURL=ForgotPasswordInput.js.map

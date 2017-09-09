@@ -19,12 +19,22 @@ export declare class AccountApi {
      *
      * @param input
      */
+    forgotPassword(input?: models.ForgotPasswordInput, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     * @param input
+     */
     isTenantAvailable(input?: models.IsTenantAvailableInput, extraHttpRequestParams?: any): Observable<models.IsTenantAvailableOutput>;
     /**
      *
      * @param input
      */
     resendValidationEmail(input?: models.UserIdInput, extraHttpRequestParams?: any): Observable<{}>;
+    /**
+     *
+     * @param input
+     */
+    resetPassword(input?: models.ResetPasswordInput, extraHttpRequestParams?: any): Observable<{}>;
     /**
      *
      * @param input
@@ -46,6 +56,12 @@ export declare class AccountApi {
      *
      * @param input
      */
+    forgotPasswordWithHttpInfo(input?: models.ForgotPasswordInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
     isTenantAvailableWithHttpInfo(input?: models.IsTenantAvailableInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
@@ -53,6 +69,12 @@ export declare class AccountApi {
      * @param input
      */
     resendValidationEmailWithHttpInfo(input?: models.UserIdInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    resetPasswordWithHttpInfo(input?: models.ResetPasswordInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *

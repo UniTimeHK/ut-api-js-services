@@ -48,6 +48,21 @@ var AccountApi = (function () {
      *
      * @param input
      */
+    AccountApi.prototype.forgotPassword = function (input, extraHttpRequestParams) {
+        return this.forgotPasswordWithHttpInfo(input, extraHttpRequestParams)
+            .map(function (response) {
+            if (response.status === 204) {
+                return undefined;
+            }
+            else {
+                return response.json() || {};
+            }
+        });
+    };
+    /**
+     *
+     * @param input
+     */
     AccountApi.prototype.isTenantAvailable = function (input, extraHttpRequestParams) {
         return this.isTenantAvailableWithHttpInfo(input, extraHttpRequestParams)
             .map(function (response) {
@@ -65,6 +80,21 @@ var AccountApi = (function () {
      */
     AccountApi.prototype.resendValidationEmail = function (input, extraHttpRequestParams) {
         return this.resendValidationEmailWithHttpInfo(input, extraHttpRequestParams)
+            .map(function (response) {
+            if (response.status === 204) {
+                return undefined;
+            }
+            else {
+                return response.json() || {};
+            }
+        });
+    };
+    /**
+     *
+     * @param input
+     */
+    AccountApi.prototype.resetPassword = function (input, extraHttpRequestParams) {
+        return this.resetPasswordWithHttpInfo(input, extraHttpRequestParams)
             .map(function (response) {
             if (response.status === 204) {
                 return undefined;
@@ -144,6 +174,37 @@ var AccountApi = (function () {
      *
      * @param input
      */
+    AccountApi.prototype.forgotPasswordWithHttpInfo = function (input, extraHttpRequestParams) {
+        var path = this.basePath + '/api/services/app/Account/ForgotPassword';
+        var queryParameters = new URLSearchParams();
+        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        var consumes = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+        // to determine the Accept header
+        var produces = [];
+        headers.set('Content-Type', 'application/json');
+        var requestOptions = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input),
+            search: queryParameters,
+            withCredentials: this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
+        }
+        return this.http.request(path, requestOptions);
+    };
+    /**
+     *
+     *
+     * @param input
+     */
     AccountApi.prototype.isTenantAvailableWithHttpInfo = function (input, extraHttpRequestParams) {
         var path = this.basePath + '/api/services/app/Account/IsTenantAvailable';
         var queryParameters = new URLSearchParams();
@@ -181,6 +242,37 @@ var AccountApi = (function () {
      */
     AccountApi.prototype.resendValidationEmailWithHttpInfo = function (input, extraHttpRequestParams) {
         var path = this.basePath + '/api/services/app/Account/ResendValidationEmail';
+        var queryParameters = new URLSearchParams();
+        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        var consumes = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+        // to determine the Accept header
+        var produces = [];
+        headers.set('Content-Type', 'application/json');
+        var requestOptions = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input),
+            search: queryParameters,
+            withCredentials: this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
+        }
+        return this.http.request(path, requestOptions);
+    };
+    /**
+     *
+     *
+     * @param input
+     */
+    AccountApi.prototype.resetPasswordWithHttpInfo = function (input, extraHttpRequestParams) {
+        var path = this.basePath + '/api/services/app/Account/ResetPassword';
         var queryParameters = new URLSearchParams();
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header

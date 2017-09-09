@@ -1,7 +1,6 @@
 export interface MyUserDto {
     phoneNumber?: string;
     emailAddress?: string;
-    isEmailConfirmed?: boolean;
     lastLoginTime?: string;
     birthday?: string;
     gender?: MyUserDto.GenderEnum;
@@ -9,6 +8,7 @@ export interface MyUserDto {
     userName?: string;
     iconId?: string;
     nickname?: string;
+    isAuthorized?: string;
     id?: number;
 }
 export declare namespace MyUserDto {

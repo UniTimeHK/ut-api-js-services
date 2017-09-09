@@ -9,7 +9,4 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface GetMyInstitutionsOutput {
-    myInstitutions?: Array<models.MyInstitutionDto>;
-}
+//# sourceMappingURL=GetUserInstitutionsInput.js.map

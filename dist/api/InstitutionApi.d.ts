@@ -22,11 +22,6 @@ export declare class InstitutionApi {
     createInstitution(input?: models.CreateInstitutionInput, extraHttpRequestParams?: any): Observable<models.EntityDtoInt64>;
     /**
      *
-     * @param input
-     */
-    getCollegemates(input?: models.GetCollegematesInput, extraHttpRequestParams?: any): Observable<models.GetCollegematesOutput>;
-    /**
-     *
      */
     getInstitutions(extraHttpRequestParams?: any): Observable<models.GetInstitutionsOutput>;
     /**
@@ -36,8 +31,19 @@ export declare class InstitutionApi {
     getMajors(input?: models.GetMajorsInput, extraHttpRequestParams?: any): Observable<models.GetMajorsOutput>;
     /**
      *
+     * @param input
      */
-    getMyInstitutions(extraHttpRequestParams?: any): Observable<models.GetMyInstitutionsOutput>;
+    getMyCollegemates(input?: models.GetMyCollegematesInput, extraHttpRequestParams?: any): Observable<models.GetMyCollegematesOutput>;
+    /**
+     *
+     * @param input
+     */
+    getOrganisations(input?: models.GetOrganisationsInput, extraHttpRequestParams?: any): Observable<models.GetOrganisationsOutput>;
+    /**
+     *
+     * @param input
+     */
+    getUserInstitutions(input?: models.GetUserInstitutionsInput, extraHttpRequestParams?: any): Observable<models.GetUserInstitutionsOutput>;
     /**
      *
      * @param input
@@ -78,12 +84,6 @@ export declare class InstitutionApi {
     /**
      *
      *
-     * @param input
-     */
-    getCollegematesWithHttpInfo(input?: models.GetCollegematesInput, extraHttpRequestParams?: any): Observable<Response>;
-    /**
-     *
-     *
      */
     getInstitutionsWithHttpInfo(extraHttpRequestParams?: any): Observable<Response>;
     /**
@@ -95,8 +95,21 @@ export declare class InstitutionApi {
     /**
      *
      *
+     * @param input
      */
-    getMyInstitutionsWithHttpInfo(extraHttpRequestParams?: any): Observable<Response>;
+    getMyCollegematesWithHttpInfo(input?: models.GetMyCollegematesInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getOrganisationsWithHttpInfo(input?: models.GetOrganisationsInput, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getUserInstitutionsWithHttpInfo(input?: models.GetUserInstitutionsInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *

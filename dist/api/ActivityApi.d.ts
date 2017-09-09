@@ -44,6 +44,31 @@ export declare class ActivityApi {
      *
      * @param input
      */
+    getActivityBookmarkingUsers(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityBookmarkingUsersOutput>;
+    /**
+     *
+     * @param input
+     */
+    getActivityComments(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityCommentsOutput>;
+    /**
+     *
+     * @param input
+     */
+    getActivityImages(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityImagesOutput>;
+    /**
+     *
+     * @param input
+     */
+    getActivityParticipants(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityParticipantsOutput>;
+    /**
+     *
+     * @param input
+     */
+    getActivityRatings(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityRatingsOutput>;
+    /**
+     *
+     * @param input
+     */
     getMyActivities(input?: models.GetMyActivitiesInput, extraHttpRequestParams?: any): Observable<models.GetMyActivitiesOutput>;
     /**
      *
@@ -106,6 +131,36 @@ export declare class ActivityApi {
      * @param input
      */
     getActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getActivityBookmarkingUsersWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getActivityCommentsWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getActivityImagesWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getActivityParticipantsWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getActivityRatingsWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *
