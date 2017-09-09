@@ -12,7 +12,7 @@
 
 import * as models from './models';
 
-export interface GetCollegematesOutput {
-    collegemates?: Array<models.InstitutionUserDto>;
+export interface GetUserInstitutionsInput {
+    userId?: number;
 
 }

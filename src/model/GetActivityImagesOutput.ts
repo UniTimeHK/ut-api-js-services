@@ -12,7 +12,7 @@
 
 import * as models from './models';
 
-export interface GetMyInstitutionsOutput {
-    myInstitutions?: Array<models.MyInstitutionDto>;
+export interface GetActivityImagesOutput {
+    images?: Array<models.FileDto>;
 
 }

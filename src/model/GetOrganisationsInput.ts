@@ -12,15 +12,11 @@
 
 import * as models from './models';
 
-export interface UserListDto {
-    userName?: string;
+export interface GetOrganisationsInput {
+    insitutionId?: number;
 
-    iconId?: string;
+    maxResultCount?: number;
 
-    nickname?: string;
-
-    isAuthorized?: string;
-
-    id?: number;
+    skipCount?: number;
 
 }

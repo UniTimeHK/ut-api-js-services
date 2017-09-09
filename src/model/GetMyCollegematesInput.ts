@@ -12,31 +12,15 @@
 
 import * as models from './models';
 
-export interface MyUserDto {
-    phoneNumber?: string;
+export interface GetMyCollegematesInput {
+    maxResultCount?: number;
 
-    emailAddress?: string;
+    gender?: GetMyCollegematesInput.GenderEnum;
 
-    lastLoginTime?: string;
-
-    birthday?: string;
-
-    gender?: MyUserDto.GenderEnum;
-
-    coverId?: string;
-
-    userName?: string;
-
-    iconId?: string;
-
-    nickname?: string;
-
-    isAuthorized?: string;
-
-    id?: number;
+    skipCount?: number;
 
 }
-export namespace MyUserDto {
+export namespace GetMyCollegematesInput {
     export enum GenderEnum {
         NUMBER_1 = <any> 1,
         NUMBER_2 = <any> 2,

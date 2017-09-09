@@ -135,6 +135,81 @@ export class ActivityApi {
      * 
      * @param input 
      */
+    public getActivityBookmarkingUsers(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityBookmarkingUsersOutput> {
+        return this.getActivityBookmarkingUsersWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
+    public getActivityComments(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityCommentsOutput> {
+        return this.getActivityCommentsWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
+    public getActivityImages(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityImagesOutput> {
+        return this.getActivityImagesWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
+    public getActivityParticipants(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityParticipantsOutput> {
+        return this.getActivityParticipantsWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
+    public getActivityRatings(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityRatingsOutput> {
+        return this.getActivityRatingsWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
     public getMyActivities(input?: models.GetMyActivitiesInput, extraHttpRequestParams?: any): Observable<models.GetMyActivitiesOutput> {
         return this.getMyActivitiesWithHttpInfo(input, extraHttpRequestParams)
             .map((response: Response) => {
@@ -428,6 +503,211 @@ export class ActivityApi {
      */
     public getActivityWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
         const path = this.basePath + '/api/services/app/Activity/GetActivity';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public getActivityBookmarkingUsersWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Activity/GetActivityBookmarkingUsers';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public getActivityCommentsWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Activity/GetActivityComments';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public getActivityImagesWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Activity/GetActivityImages';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public getActivityParticipantsWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Activity/GetActivityParticipants';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json',
+            'text/json',
+            'application/json-patch+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public getActivityRatingsWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Activity/GetActivityRatings';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845

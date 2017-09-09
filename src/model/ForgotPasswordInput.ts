@@ -12,18 +12,7 @@
 
 import * as models from './models';
 
-export interface GetCollegematesInput {
-    maxResultCount?: number;
+export interface ForgotPasswordInput {
+    emailAddress?: string;
 
-    gender?: GetCollegematesInput.GenderEnum;
-
-    skipCount?: number;
-
-}
-export namespace GetCollegematesInput {
-    export enum GenderEnum {
-        NUMBER_1 = <any> 1,
-        NUMBER_2 = <any> 2,
-        NUMBER_3 = <any> 3
-    }
 }

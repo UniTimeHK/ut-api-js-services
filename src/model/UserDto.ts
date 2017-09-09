@@ -15,8 +15,6 @@ import * as models from './models';
 export interface UserDto {
     emailAddress?: string;
 
-    isEmailConfirmed?: boolean;
-
     lastLoginTime?: string;
 
     birthday?: string;
@@ -30,6 +28,8 @@ export interface UserDto {
     iconId?: string;
 
     nickname?: string;
+
+    isAuthorized?: string;
 
     id?: number;
 

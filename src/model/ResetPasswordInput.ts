@@ -12,15 +12,11 @@
 
 import * as models from './models';
 
-export interface UserListDto {
-    userName?: string;
+export interface ResetPasswordInput {
+    emailAddress?: string;
 
-    iconId?: string;
+    passwordResetCode?: string;
 
-    nickname?: string;
-
-    isAuthorized?: string;
-
-    id?: number;
+    newPassword?: string;
 
 }
