@@ -1,6 +1,7 @@
 export interface GetMyCollegematesInput {
     maxResultCount?: number;
     gender?: GetMyCollegematesInput.GenderEnum;
+    hasOnlyMyInstitutions?: boolean;
     skipCount?: number;
 }
 export declare namespace GetMyCollegematesInput {

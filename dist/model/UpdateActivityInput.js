@@ -9,4 +9,13 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+export var UpdateActivityInput;
+(function (UpdateActivityInput) {
+    var PrivacyEnum;
+    (function (PrivacyEnum) {
+        PrivacyEnum[PrivacyEnum["NUMBER_0"] = 0] = "NUMBER_0";
+        PrivacyEnum[PrivacyEnum["NUMBER_1"] = 1] = "NUMBER_1";
+        PrivacyEnum[PrivacyEnum["NUMBER_2"] = 2] = "NUMBER_2";
+    })(PrivacyEnum = UpdateActivityInput.PrivacyEnum || (UpdateActivityInput.PrivacyEnum = {}));
+})(UpdateActivityInput || (UpdateActivityInput = {}));
 //# sourceMappingURL=UpdateActivityInput.js.map

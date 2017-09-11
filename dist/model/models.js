@@ -15,6 +15,7 @@ export * from './GetMyCollegematesInput';
 export * from './IsTenantAvailableOutput';
 export * from './MyUserDto';
 export * from './RatingDto';
+export * from './UpdateActivityInput';
 export * from './UpdateMyUserInput';
 export * from './UserDto';
 //# sourceMappingURL=models.js.map

@@ -19,6 +19,8 @@ export interface UpdateActivityInput {
 
     isAllDay?: boolean;
 
+    privacy?: UpdateActivityInput.PrivacyEnum;
+
     name: string;
 
     descriptionIds?: Array<number>;
@@ -29,4 +31,11 @@ export interface UpdateActivityInput {
 
     id?: string;
 
+}
+export namespace UpdateActivityInput {
+    export enum PrivacyEnum {
+        NUMBER_0 = <any> 0,
+        NUMBER_1 = <any> 1,
+        NUMBER_2 = <any> 2
+    }
 }

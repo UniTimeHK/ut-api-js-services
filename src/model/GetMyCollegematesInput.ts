@@ -17,6 +17,8 @@ export interface GetMyCollegematesInput {
 
     gender?: GetMyCollegematesInput.GenderEnum;
 
+    hasOnlyMyInstitutions?: boolean;
+
     skipCount?: number;
 
 }
