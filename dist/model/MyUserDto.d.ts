@@ -8,7 +8,7 @@ export interface MyUserDto {
     userName?: string;
     iconId?: string;
     nickname?: string;
-    isAuthorized?: string;
+    isAuthorized?: boolean;
     id?: number;
 }
 export declare namespace MyUserDto {

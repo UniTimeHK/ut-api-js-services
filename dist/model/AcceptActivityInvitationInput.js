@@ -14,8 +14,9 @@ export var AcceptActivityInvitationInput;
     var PrivacyEnum;
     (function (PrivacyEnum) {
         PrivacyEnum[PrivacyEnum["NUMBER_0"] = 0] = "NUMBER_0";
-        PrivacyEnum[PrivacyEnum["NUMBER_1"] = 1] = "NUMBER_1";
-        PrivacyEnum[PrivacyEnum["NUMBER_2"] = 2] = "NUMBER_2";
+        PrivacyEnum[PrivacyEnum["NUMBER_10"] = 10] = "NUMBER_10";
+        PrivacyEnum[PrivacyEnum["NUMBER_20"] = 20] = "NUMBER_20";
+        PrivacyEnum[PrivacyEnum["NUMBER_30"] = 30] = "NUMBER_30";
     })(PrivacyEnum = AcceptActivityInvitationInput.PrivacyEnum || (AcceptActivityInvitationInput.PrivacyEnum = {}));
 })(AcceptActivityInvitationInput || (AcceptActivityInvitationInput = {}));
 //# sourceMappingURL=AcceptActivityInvitationInput.js.map

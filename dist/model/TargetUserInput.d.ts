@@ -1,3 +1,3 @@
 export interface TargetUserInput {
-    targetUserId: number;
+    targetUserId?: number;
 }

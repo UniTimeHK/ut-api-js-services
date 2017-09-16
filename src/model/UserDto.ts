@@ -29,7 +29,7 @@ export interface UserDto {
 
     nickname?: string;
 
-    isAuthorized?: string;
+    isAuthorized?: boolean;
 
     id?: number;
 

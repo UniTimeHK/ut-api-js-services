@@ -19,7 +19,7 @@ export interface UserListDto {
 
     nickname?: string;
 
-    isAuthorized?: string;
+    isAuthorized?: boolean;
 
     id?: number;
 

@@ -31,7 +31,7 @@ export interface MyUserDto {
 
     nickname?: string;
 
-    isAuthorized?: string;
+    isAuthorized?: boolean;
 
     id?: number;
 

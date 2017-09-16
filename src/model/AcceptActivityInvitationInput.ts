@@ -21,7 +21,8 @@ export interface AcceptActivityInvitationInput {
 export namespace AcceptActivityInvitationInput {
     export enum PrivacyEnum {
         NUMBER_0 = <any> 0,
-        NUMBER_1 = <any> 1,
-        NUMBER_2 = <any> 2
+        NUMBER_10 = <any> 10,
+        NUMBER_20 = <any> 20,
+        NUMBER_30 = <any> 30
     }
 }

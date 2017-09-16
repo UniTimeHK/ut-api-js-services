@@ -12,7 +12,8 @@ export interface UpdateActivityInput {
 export declare namespace UpdateActivityInput {
     enum PrivacyEnum {
         NUMBER_0,
-        NUMBER_1,
-        NUMBER_2,
+        NUMBER_10,
+        NUMBER_20,
+        NUMBER_30,
     }
 }
