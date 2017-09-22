@@ -85,9 +85,10 @@ var ChatRoomMessageApi = (function () {
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header
         var consumes = [
+            'application/json-patch+json',
             'application/json',
             'text/json',
-            'application/json-patch+json'
+            'application/_*+json'
         ];
         // to determine the Accept header
         var produces = [
@@ -120,9 +121,10 @@ var ChatRoomMessageApi = (function () {
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header
         var consumes = [
+            'application/json-patch+json',
             'application/json',
             'text/json',
-            'application/json-patch+json'
+            'application/_*+json'
         ];
         // to determine the Accept header
         var produces = [
@@ -155,9 +157,10 @@ var ChatRoomMessageApi = (function () {
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header
         var consumes = [
+            'application/json-patch+json',
             'application/json',
             'text/json',
-            'application/json-patch+json'
+            'application/_*+json'
         ];
         // to determine the Accept header
         var produces = [

@@ -1,6 +1,6 @@
 {
   "name": "ut-api-js-services",
-  "version": "1.9.4",
+  "version": "2.2.0",
   "description": "ut-api-js-services",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

@@ -84,9 +84,10 @@ export class TagApi {
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header
         let consumes: string[] = [
+            'application/json-patch+json',
             'application/json',
             'text/json',
-            'application/json-patch+json'
+            'application/_*+json'
         ];
 
         // to determine the Accept header
@@ -125,9 +126,10 @@ export class TagApi {
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header
         let consumes: string[] = [
+            'application/json-patch+json',
             'application/json',
             'text/json',
-            'application/json-patch+json'
+            'application/_*+json'
         ];
 
         // to determine the Accept header
