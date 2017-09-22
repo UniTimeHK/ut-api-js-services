@@ -15,6 +15,8 @@ import * as models from './models';
 export interface GetMyActivityIdsOutput {
     myActivityIds?: Array<string>;
 
-    removedActivityIds?: Array<string>;
+    removedMyActivityIds?: Array<string>;
+
+    updatedMyActivityIds?: Array<string>;
 
 }

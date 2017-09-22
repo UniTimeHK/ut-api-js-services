@@ -15,8 +15,4 @@ import * as models from './models';
 export interface GetMyActivityIdsInput {
     lastRetrieveTime?: string;
 
-    maxResultCount?: number;
-
-    skipCount?: number;
-
 }

@@ -1,4 +1,5 @@
 export interface GetMyActivityIdsOutput {
     myActivityIds?: Array<string>;
-    removedActivityIds?: Array<string>;
+    removedMyActivityIds?: Array<string>;
+    updatedMyActivityIds?: Array<string>;
 }
