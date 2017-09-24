@@ -13,6 +13,8 @@
 import * as models from './models';
 
 export interface ActivityInvitationDto {
+    activityId?: string;
+
     activity?: models.ActivityListDto;
 
     content?: string;

@@ -28,7 +28,7 @@ import { Configuration }                                     from '../configurat
 @Injectable()
 export class ActivityInvitationApi {
 
-    protected basePath = 'https://ut-api.azurewebsites.net';
+    protected basePath = 'https://api.unitime.hk';
     public defaultHeaders: Headers = new Headers();
     public configuration: Configuration = new Configuration();
 
@@ -104,7 +104,7 @@ export class ActivityInvitationApi {
     /**
      * 
      */
-    public getMyPendingActivityInvitations(extraHttpRequestParams?: any): Observable<models.GetActivityInvitationsOutput> {
+    public getMyPendingActivityInvitations(extraHttpRequestParams?: any): Observable<models.GetMyPendingActivityInvitationsOutput> {
         return this.getMyPendingActivityInvitationsWithHttpInfo(extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {

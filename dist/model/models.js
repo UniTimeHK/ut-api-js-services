@@ -12,6 +12,7 @@ export * from './CreateRatingInput';
 export * from './DescriptionDto';
 export * from './FriendInvitationDto';
 export * from './GetMyCollegematesInput';
+export * from './InvitationDto';
 export * from './IsTenantAvailableOutput';
 export * from './MyUserDto';
 export * from './RatingDto';

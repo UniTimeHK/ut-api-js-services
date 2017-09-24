@@ -33,7 +33,7 @@ export declare class ActivityInvitationApi {
     /**
      *
      */
-    getMyPendingActivityInvitations(extraHttpRequestParams?: any): Observable<models.GetActivityInvitationsOutput>;
+    getMyPendingActivityInvitations(extraHttpRequestParams?: any): Observable<models.GetMyPendingActivityInvitationsOutput>;
     /**
      *
      * @param input

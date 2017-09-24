@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetActivityInvitationsOutput {
-    activityInvitations?: Array<models.ActivityInvitationDto>;
+    activityInvitations?: Array<models.InvitationDto>;
 }
