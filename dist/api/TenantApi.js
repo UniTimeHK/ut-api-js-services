@@ -19,7 +19,7 @@ import { Configuration } from '../configuration';
 var TenantApi = (function () {
     function TenantApi(http, basePath, configuration) {
         this.http = http;
-        this.basePath = 'https://api.unitime.hk';
+        this.basePath = 'https://ut-api.azurewebsites.net';
         this.defaultHeaders = new Headers();
         this.configuration = new Configuration();
         if (basePath) {
