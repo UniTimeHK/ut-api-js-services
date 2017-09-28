@@ -12,7 +12,17 @@
 
 import * as models from './models';
 
-export interface GetWorldActivitiesOutput {
-    worldActivities?: Array<models.WorldActivityListDto>;
+export interface UserWithInstitutionsDto {
+    institutions?: Array<models.InstitutionUserDto>;
+
+    userName?: string;
+
+    iconId?: string;
+
+    nickname?: string;
+
+    isAuthorized?: boolean;
+
+    id?: number;
 
 }

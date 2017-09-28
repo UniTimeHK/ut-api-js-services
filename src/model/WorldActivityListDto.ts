@@ -12,7 +12,13 @@
 
 import * as models from './models';
 
-export interface GetWorldActivitiesOutput {
-    worldActivities?: Array<models.WorldActivityListDto>;
+export interface WorldActivityListDto {
+    action?: string;
+
+    activityListDto?: models.ActivityListDto;
+
+    actionCreationTime?: string;
+
+    data?: { [key: string]: string; };
 
 }

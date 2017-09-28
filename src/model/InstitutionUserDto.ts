@@ -13,13 +13,11 @@
 import * as models from './models';
 
 export interface InstitutionUserDto {
-    institutionId?: number;
+    id?: number;
 
-    institutionName?: string;
+    name?: string;
 
-    institutionChineseName?: string;
-
-    user?: models.UserListDto;
+    chineseName?: string;
 
     major?: string;
 

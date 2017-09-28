@@ -13,6 +13,6 @@
 import * as models from './models';
 
 export interface GetMyCollegematesOutput {
-    collegemates?: Array<models.InstitutionUserDto>;
+    collegemates?: Array<models.UserWithInstitutionsDto>;
 
 }
