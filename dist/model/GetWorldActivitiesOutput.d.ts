@@ -11,5 +11,5 @@
  */
 import * as models from './models';
 export interface GetWorldActivitiesOutput {
-    activities?: Array<models.ActivityListDto>;
+    worldActivities?: Array<models.WorldActivityListDto>;
 }

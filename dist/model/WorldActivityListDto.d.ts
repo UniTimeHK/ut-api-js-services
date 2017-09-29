@@ -10,11 +10,11 @@
  * Do not edit the class manually.
  */
 import * as models from './models';
-export interface GetMyUserOutput {
-    myUser?: models.MyUserDto;
-    numberOfActivityInvitations?: number;
-    numberOfFriendInvitations?: number;
-    numberOfFriends?: number;
-    isStudent?: boolean;
-    numberOfUnreadNotificatitons?: number;
+export interface WorldActivityListDto {
+    action?: string;
+    activityListDto?: models.ActivityListDto;
+    actionCreationTime?: string;
+    data?: {
+        [key: string]: string;
+    };
 }

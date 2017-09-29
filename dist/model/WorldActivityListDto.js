@@ -9,12 +9,4 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import * as models from './models';
-export interface GetMyUserOutput {
-    myUser?: models.MyUserDto;
-    numberOfActivityInvitations?: number;
-    numberOfFriendInvitations?: number;
-    numberOfFriends?: number;
-    isStudent?: boolean;
-    numberOfUnreadNotificatitons?: number;
-}
+//# sourceMappingURL=WorldActivityListDto.js.map
