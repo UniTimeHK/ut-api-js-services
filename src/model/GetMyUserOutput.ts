@@ -23,4 +23,6 @@ export interface GetMyUserOutput {
 
     isStudent?: boolean;
 
+    numberOfUnreadNotificatitons?: number;
+
 }
