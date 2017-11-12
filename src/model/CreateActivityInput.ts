@@ -23,6 +23,8 @@ export interface CreateActivityInput {
 
     votingId?: string;
 
+    systemEventId?: string;
+
     name: string;
 
     locationId?: string;

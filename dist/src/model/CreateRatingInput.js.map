@@ -1,0 +1,1 @@
+{"version":3,"file":"CreateRatingInput.js","sourceRoot":"","sources":["../../../src/model/CreateRatingInput.ts"],"names":[],"mappings":";;;;;;;;;;;AAwBA,MAAM,KAAW,iBAAiB,CAKjC;AALD,WAAiB,iBAAiB;IAC9B,IAAY,gBAGX;IAHD,WAAY,gBAAgB;QACxB,gDAAiB,CAAC,cAAA,CAAA;QAClB,gDAAiB,CAAC,cAAA,CAAA;OAFV,gBAAgB,GAAhB,kCAAgB,KAAhB,kCAAgB,QAG3B;GAJY,iBAAiB,KAAjB,iBAAiB,QAKjC"}

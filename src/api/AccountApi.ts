@@ -135,6 +135,21 @@ export class AccountApi {
      * 
      * @param input 
      */
+    public signUpAsOrganisation(input?: models.SignUpAsOrganisationInput, extraHttpRequestParams?: any): Observable<models.SignUpOutput> {
+        return this.signUpAsOrganisationWithHttpInfo(input, extraHttpRequestParams)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json() || {};
+                }
+            });
+    }
+
+    /**
+     * 
+     * @param input 
+     */
     public validateEmail(input?: models.ValidateEmailInput, extraHttpRequestParams?: any): Observable<models.ValidateEmailOutput> {
         return this.validateEmailWithHttpInfo(input, extraHttpRequestParams)
             .map((response: Response) => {
@@ -355,6 +370,48 @@ export class AccountApi {
      */
     public signUpWithHttpInfo(input?: models.SignUpInput, extraHttpRequestParams?: any): Observable<Response> {
         const path = this.basePath + '/api/services/app/Account/SignUp';
+
+        let queryParameters = new URLSearchParams();
+        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
+        // to determine the Content-Type header
+        let consumes: string[] = [
+            'application/json-patch+json',
+            'application/json',
+            'text/json',
+            'application/_*+json'
+        ];
+
+        // to determine the Accept header
+        let produces: string[] = [
+            'application/json',
+            'text/json',
+            'text/plain'
+        ];
+
+        headers.set('Content-Type', 'application/json');
+
+        let requestOptions: RequestOptionsArgs = new RequestOptions({
+            method: RequestMethod.Post,
+            headers: headers,
+            body: input == null ? '' : JSON.stringify(input), // https://github.com/angular/angular/issues/10612
+            search: queryParameters,
+            withCredentials:this.configuration.withCredentials
+        });
+        // https://github.com/swagger-api/swagger-codegen/issues/4037
+        if (extraHttpRequestParams) {
+            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
+        }
+
+        return this.http.request(path, requestOptions);
+    }
+
+    /**
+     * 
+     * 
+     * @param input 
+     */
+    public signUpAsOrganisationWithHttpInfo(input?: models.SignUpAsOrganisationInput, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/services/app/Account/SignUpAsOrganisation';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845

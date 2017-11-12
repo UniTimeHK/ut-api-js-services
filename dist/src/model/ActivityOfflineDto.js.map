@@ -1,0 +1,1 @@
+{"version":3,"file":"ActivityOfflineDto.js","sourceRoot":"","sources":["../../../src/model/ActivityOfflineDto.ts"],"names":[],"mappings":";;;;;;;;;;;AA4CA,MAAM,KAAW,kBAAkB,CAKlC;AALD,WAAiB,kBAAkB;IAC/B,IAAY,kBAGX;IAHD,WAAY,kBAAkB;QAC1B,oDAAiB,CAAC,cAAA,CAAA;QAClB,oDAAiB,CAAC,cAAA,CAAA;OAFV,kBAAkB,GAAlB,qCAAkB,KAAlB,qCAAkB,QAG7B;GAJY,kBAAkB,KAAlB,kBAAkB,QAKlC"}

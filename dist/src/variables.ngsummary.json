@@ -1,0 +1,1 @@
+{"moduleName":null,"summaries":[{"symbol":{"__symbol":0,"members":[]},"metadata":"https://api.unitime.hk"},{"symbol":{"__symbol":1,"members":[]},"metadata":{"csv":",","tsv":"   ","ssv":" ","pipes":"|","$quoted$":["csv","tsv","ssv","pipes"]}}],"symbols":[{"__symbol":0,"name":"BASE_PATH","filePath":"./variables"},{"__symbol":1,"name":"COLLECTION_FORMATS","filePath":"./variables"}]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"ChatRoomMessageDto.js","sourceRoot":"","sources":["../../../src/model/ChatRoomMessageDto.ts"],"names":[],"mappings":";;;;;;;;;;;AA8BA,MAAM,KAAW,kBAAkB,CAMlC;AAND,WAAiB,kBAAkB;IAC/B,IAAY,QAIX;IAJD,WAAY,QAAQ;QAChB,gCAAiB,CAAC,cAAA,CAAA;QAClB,gCAAiB,CAAC,cAAA,CAAA;QAClB,gCAAiB,CAAC,cAAA,CAAA;OAHV,QAAQ,GAAR,2BAAQ,KAAR,2BAAQ,QAInB;GALY,kBAAkB,KAAlB,kBAAkB,QAMlC"}
