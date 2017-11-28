@@ -135,6 +135,7 @@ export * from './RemoveInstitutionInput';
 export * from './RemoveMyInstitutionInput';
 export * from './RemoveSuggestionsInput';
 export * from './ReplyDto';
+export * from './ReportActivityInput';
 export * from './ResetPasswordInput';
 export * from './RoleDto';
 export * from './SignUpAsOrganisationInput';

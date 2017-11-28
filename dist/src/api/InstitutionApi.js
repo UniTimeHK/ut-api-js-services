@@ -373,9 +373,9 @@ var InstitutionApi = (function () {
         ];
         // to determine the Accept header
         var produces = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
         headers.set('Content-Type', 'application/json');
         var requestOptions = new RequestOptions({
@@ -412,9 +412,9 @@ var InstitutionApi = (function () {
         var consumes = [];
         // to determine the Accept header
         var produces = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
         var requestOptions = new RequestOptions({
             method: RequestMethod.Post,
@@ -456,9 +456,9 @@ var InstitutionApi = (function () {
         ];
         // to determine the Accept header
         var produces = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
         headers.set('Content-Type', 'application/json');
         var requestOptions = new RequestOptions({
@@ -503,9 +503,9 @@ var InstitutionApi = (function () {
         ];
         // to determine the Accept header
         var produces = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
         headers.set('Content-Type', 'application/json');
         var requestOptions = new RequestOptions({
@@ -550,9 +550,9 @@ var InstitutionApi = (function () {
         ];
         // to determine the Accept header
         var produces = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
         headers.set('Content-Type', 'application/json');
         var requestOptions = new RequestOptions({
@@ -597,9 +597,9 @@ var InstitutionApi = (function () {
         ];
         // to determine the Accept header
         var produces = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
         headers.set('Content-Type', 'application/json');
         var requestOptions = new RequestOptions({

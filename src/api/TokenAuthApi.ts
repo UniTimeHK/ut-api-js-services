@@ -106,9 +106,9 @@ export class TokenAuthApi {
 
         // to determine the Accept header
         let produces: string[] = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
 
         headers.set('Content-Type', 'application/json');
@@ -148,9 +148,9 @@ export class TokenAuthApi {
 
         // to determine the Accept header
         let produces: string[] = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
 
         headers.set('Content-Type', 'application/json');
@@ -185,9 +185,9 @@ export class TokenAuthApi {
 
         // to determine the Accept header
         let produces: string[] = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
 
         let requestOptions: RequestOptionsArgs = new RequestOptions({

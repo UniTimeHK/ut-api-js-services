@@ -77,9 +77,9 @@ export class ReplyApi {
 
         // to determine the Accept header
         let produces: string[] = [
+            'text/plain',
             'application/json',
-            'text/json',
-            'text/plain'
+            'text/json'
         ];
 
         headers.set('Content-Type', 'application/json');
