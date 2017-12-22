@@ -21,4 +21,6 @@ export interface GetUserOutput {
 
     hasInvited?: boolean;
 
+    hasBeenInvited?: boolean;
+
 }
