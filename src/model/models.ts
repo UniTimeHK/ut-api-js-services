@@ -129,7 +129,6 @@ export * from './PermissionDto';
 export * from './PlaceDto';
 export * from './QuitChatRoomInput';
 export * from './RatingDto';
-export * from './RatingInput';
 export * from './RemoveImagesInput';
 export * from './RemoveInstitutionInput';
 export * from './RemoveMyInstitutionInput';

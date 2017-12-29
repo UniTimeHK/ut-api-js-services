@@ -74,29 +74,6 @@ var RatingApi = (function () {
     };
     /**
      *
-     * @param input
-     */
-    /**
-         *
-         * @param input
-         */
-    RatingApi.prototype.removeRating = /**
-         *
-         * @param input
-         */
-    function (input, extraHttpRequestParams) {
-        return this.removeRatingWithHttpInfo(input, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json() || {};
-            }
-        });
-    };
-    /**
-     *
      *
      * @param input
      */
@@ -169,49 +146,6 @@ var RatingApi = (function () {
         var requestOptions = new RequestOptions({
             method: RequestMethod.Post,
             headers: headers,
-            search: queryParameters,
-            withCredentials: this.configuration.withCredentials
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     *
-     *
-     * @param input
-     */
-    /**
-         *
-         *
-         * @param input
-         */
-    RatingApi.prototype.removeRatingWithHttpInfo = /**
-         *
-         *
-         * @param input
-         */
-    function (input, extraHttpRequestParams) {
-        var path = this.basePath + '/api/services/app/Rating/RemoveRating';
-        var queryParameters = new URLSearchParams();
-        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // to determine the Content-Type header
-        var consumes = [
-            'application/json-patch+json',
-            'application/json',
-            'text/json',
-            'application/_*+json'
-        ];
-        // to determine the Accept header
-        var produces = [];
-        headers.set('Content-Type', 'application/json');
-        var requestOptions = new RequestOptions({
-            method: RequestMethod.Post,
-            headers: headers,
-            body: input == null ? '' : JSON.stringify(input),
-            // https://github.com/angular/angular/issues/10612
             search: queryParameters,
             withCredentials: this.configuration.withCredentials
         });

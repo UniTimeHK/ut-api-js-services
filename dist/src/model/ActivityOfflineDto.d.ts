@@ -30,5 +30,6 @@ export declare namespace ActivityOfflineDto {
     enum MyRatingStatusEnum {
         NUMBER_0,
         NUMBER_1,
+        NUMBER_MINUS_1,
     }
 }

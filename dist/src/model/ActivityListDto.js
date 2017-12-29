@@ -15,6 +15,7 @@ export var ActivityListDto;
     (function (MyRatingStatusEnum) {
         MyRatingStatusEnum[MyRatingStatusEnum["NUMBER_0"] = 0] = "NUMBER_0";
         MyRatingStatusEnum[MyRatingStatusEnum["NUMBER_1"] = 1] = "NUMBER_1";
+        MyRatingStatusEnum[MyRatingStatusEnum["NUMBER_MINUS_1"] = -1] = "NUMBER_MINUS_1";
     })(MyRatingStatusEnum = ActivityListDto.MyRatingStatusEnum || (ActivityListDto.MyRatingStatusEnum = {}));
 })(ActivityListDto || (ActivityListDto = {}));
 //# sourceMappingURL=ActivityListDto.js.map

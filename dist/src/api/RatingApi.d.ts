@@ -21,11 +21,6 @@ export declare class RatingApi {
     getMyRatings(extraHttpRequestParams?: any): Observable<models.GetRatingsOutput>;
     /**
      *
-     * @param input
-     */
-    removeRating(input?: models.RatingInput, extraHttpRequestParams?: any): Observable<{}>;
-    /**
-     *
      *
      * @param input
      */
@@ -35,10 +30,4 @@ export declare class RatingApi {
      *
      */
     getMyRatingsWithHttpInfo(extraHttpRequestParams?: any): Observable<Response>;
-    /**
-     *
-     *
-     * @param input
-     */
-    removeRatingWithHttpInfo(input?: models.RatingInput, extraHttpRequestParams?: any): Observable<Response>;
 }

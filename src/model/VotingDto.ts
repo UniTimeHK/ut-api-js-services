@@ -19,6 +19,8 @@ export interface VotingDto {
 
     locationSuggestions?: Array<models.LocationSuggestionListDto>;
 
+    myVotedSuggestionIds?: Array<string>;
+
     name?: string;
 
     organiser?: models.UserListDto;

@@ -25,6 +25,7 @@ export interface CreateRatingInput {
 export namespace CreateRatingInput {
     export enum RatingStatusEnum {
         NUMBER_0 = <any> 0,
-        NUMBER_1 = <any> 1
+        NUMBER_1 = <any> 1,
+        NUMBER_MINUS_1 = <any> -1
     }
 }

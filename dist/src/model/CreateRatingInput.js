@@ -15,6 +15,7 @@ export var CreateRatingInput;
     (function (RatingStatusEnum) {
         RatingStatusEnum[RatingStatusEnum["NUMBER_0"] = 0] = "NUMBER_0";
         RatingStatusEnum[RatingStatusEnum["NUMBER_1"] = 1] = "NUMBER_1";
+        RatingStatusEnum[RatingStatusEnum["NUMBER_MINUS_1"] = -1] = "NUMBER_MINUS_1";
     })(RatingStatusEnum = CreateRatingInput.RatingStatusEnum || (CreateRatingInput.RatingStatusEnum = {}));
 })(CreateRatingInput || (CreateRatingInput = {}));
 //# sourceMappingURL=CreateRatingInput.js.map
