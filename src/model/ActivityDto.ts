@@ -21,6 +21,8 @@ export interface ActivityDto {
 
     privacy?: ActivityDto.PrivacyEnum;
 
+    alertTimings?: Array<ActivityDto.AlertTimingsEnum>;
+
     images?: Array<models.FileDto>;
 
     participants?: Array<models.UserListDto>;
@@ -50,5 +52,16 @@ export namespace ActivityDto {
         NUMBER_10 = <any> 10,
         NUMBER_20 = <any> 20,
         NUMBER_30 = <any> 30
+    }
+    export enum AlertTimingsEnum {
+        _0 = <any> '0',
+        _1 = <any> '1',
+        _2 = <any> '2',
+        _3 = <any> '3',
+        _4 = <any> '4',
+        _5 = <any> '5',
+        _6 = <any> '6',
+        _7 = <any> '7',
+        _8 = <any> '8'
     }
 }

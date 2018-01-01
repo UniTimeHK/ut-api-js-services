@@ -14,6 +14,7 @@ export interface ActivityListDto {
     startTime?: string;
     endTime?: string;
     isAllDay?: boolean;
+    alertTimings?: Array<ActivityListDto.AlertTimingsEnum>;
     activityTemplateId?: string;
     name?: string;
     location?: models.LocationDto;
@@ -29,6 +30,17 @@ export interface ActivityListDto {
     id?: string;
 }
 export declare namespace ActivityListDto {
+    enum AlertTimingsEnum {
+        _0,
+        _1,
+        _2,
+        _3,
+        _4,
+        _5,
+        _6,
+        _7,
+        _8,
+    }
     enum MyRatingStatusEnum {
         NUMBER_0,
         NUMBER_1,

@@ -19,6 +19,8 @@ export interface ActivityListDto {
 
     isAllDay?: boolean;
 
+    alertTimings?: Array<ActivityListDto.AlertTimingsEnum>;
+
     activityTemplateId?: string;
 
     name?: string;
@@ -47,6 +49,17 @@ export interface ActivityListDto {
 
 }
 export namespace ActivityListDto {
+    export enum AlertTimingsEnum {
+        _0 = <any> '0',
+        _1 = <any> '1',
+        _2 = <any> '2',
+        _3 = <any> '3',
+        _4 = <any> '4',
+        _5 = <any> '5',
+        _6 = <any> '6',
+        _7 = <any> '7',
+        _8 = <any> '8'
+    }
     export enum MyRatingStatusEnum {
         NUMBER_0 = <any> 0,
         NUMBER_1 = <any> 1,

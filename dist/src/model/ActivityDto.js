@@ -18,5 +18,17 @@ export var ActivityDto;
         PrivacyEnum[PrivacyEnum["NUMBER_20"] = 20] = "NUMBER_20";
         PrivacyEnum[PrivacyEnum["NUMBER_30"] = 30] = "NUMBER_30";
     })(PrivacyEnum = ActivityDto.PrivacyEnum || (ActivityDto.PrivacyEnum = {}));
+    var AlertTimingsEnum;
+    (function (AlertTimingsEnum) {
+        AlertTimingsEnum[AlertTimingsEnum["_0"] = '0'] = "_0";
+        AlertTimingsEnum[AlertTimingsEnum["_1"] = '1'] = "_1";
+        AlertTimingsEnum[AlertTimingsEnum["_2"] = '2'] = "_2";
+        AlertTimingsEnum[AlertTimingsEnum["_3"] = '3'] = "_3";
+        AlertTimingsEnum[AlertTimingsEnum["_4"] = '4'] = "_4";
+        AlertTimingsEnum[AlertTimingsEnum["_5"] = '5'] = "_5";
+        AlertTimingsEnum[AlertTimingsEnum["_6"] = '6'] = "_6";
+        AlertTimingsEnum[AlertTimingsEnum["_7"] = '7'] = "_7";
+        AlertTimingsEnum[AlertTimingsEnum["_8"] = '8'] = "_8";
+    })(AlertTimingsEnum = ActivityDto.AlertTimingsEnum || (ActivityDto.AlertTimingsEnum = {}));
 })(ActivityDto || (ActivityDto = {}));
 //# sourceMappingURL=ActivityDto.js.map
