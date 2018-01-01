@@ -19,6 +19,8 @@ export interface UpdateActivityInput {
 
     isAllDay?: boolean;
 
+    alertTimings?: Array<UpdateActivityInput.AlertTimingsEnum>;
+
     privacy?: UpdateActivityInput.PrivacyEnum;
 
     name: string;
@@ -33,6 +35,17 @@ export interface UpdateActivityInput {
 
 }
 export namespace UpdateActivityInput {
+    export enum AlertTimingsEnum {
+        _0 = <any> '0',
+        _1 = <any> '1',
+        _2 = <any> '2',
+        _3 = <any> '3',
+        _4 = <any> '4',
+        _5 = <any> '5',
+        _6 = <any> '6',
+        _7 = <any> '7',
+        _8 = <any> '8'
+    }
     export enum PrivacyEnum {
         NUMBER_0 = <any> 0,
         NUMBER_10 = <any> 10,

@@ -11,6 +11,18 @@
  */
 export var CreateActivityFromActivityTemplateInput;
 (function (CreateActivityFromActivityTemplateInput) {
+    var AlertTimingsEnum;
+    (function (AlertTimingsEnum) {
+        AlertTimingsEnum[AlertTimingsEnum["_0"] = '0'] = "_0";
+        AlertTimingsEnum[AlertTimingsEnum["_1"] = '1'] = "_1";
+        AlertTimingsEnum[AlertTimingsEnum["_2"] = '2'] = "_2";
+        AlertTimingsEnum[AlertTimingsEnum["_3"] = '3'] = "_3";
+        AlertTimingsEnum[AlertTimingsEnum["_4"] = '4'] = "_4";
+        AlertTimingsEnum[AlertTimingsEnum["_5"] = '5'] = "_5";
+        AlertTimingsEnum[AlertTimingsEnum["_6"] = '6'] = "_6";
+        AlertTimingsEnum[AlertTimingsEnum["_7"] = '7'] = "_7";
+        AlertTimingsEnum[AlertTimingsEnum["_8"] = '8'] = "_8";
+    })(AlertTimingsEnum = CreateActivityFromActivityTemplateInput.AlertTimingsEnum || (CreateActivityFromActivityTemplateInput.AlertTimingsEnum = {}));
     var PrivacyEnum;
     (function (PrivacyEnum) {
         PrivacyEnum[PrivacyEnum["NUMBER_0"] = 0] = "NUMBER_0";
