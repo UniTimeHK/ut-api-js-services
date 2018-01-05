@@ -4,6 +4,7 @@ export interface UpdateActivityInput {
     isAllDay?: boolean;
     alertTimings?: Array<UpdateActivityInput.AlertTimingsEnum>;
     privacy?: UpdateActivityInput.PrivacyEnum;
+    previewToken?: string;
     name: string;
     descriptionIds?: Array<number>;
     tagTexts?: Array<string>;

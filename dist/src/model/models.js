@@ -3,6 +3,7 @@ export * from './ActivityDto';
 export * from './ActivityInvitationDto';
 export * from './ActivityListDto';
 export * from './ActivityOfflineDto';
+export * from './ActivityPreviewDto';
 export * from './ChatRoomMessageDto';
 export * from './ChatRoomMessageListDto';
 export * from './CommentDto';

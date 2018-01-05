@@ -23,6 +23,8 @@ export interface UpdateActivityInput {
 
     privacy?: UpdateActivityInput.PrivacyEnum;
 
+    previewToken?: string;
+
     name: string;
 
     descriptionIds?: Array<number>;

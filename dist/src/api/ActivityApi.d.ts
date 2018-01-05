@@ -64,6 +64,11 @@ export declare class ActivityApi {
      *
      * @param input
      */
+    getActivityPreview(input?: models.GetActivityPreviewInput, extraHttpRequestParams?: any): Observable<models.GetActivityPreviewOutput>;
+    /**
+     *
+     * @param input
+     */
     getActivityRatings(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<models.GetActivityRatingsOutput>;
     /**
      *
@@ -155,6 +160,12 @@ export declare class ActivityApi {
      * @param input
      */
     getActivityParticipantsWithHttpInfo(input?: models.EntityDtoGuid, extraHttpRequestParams?: any): Observable<Response>;
+    /**
+     *
+     *
+     * @param input
+     */
+    getActivityPreviewWithHttpInfo(input?: models.GetActivityPreviewInput, extraHttpRequestParams?: any): Observable<Response>;
     /**
      *
      *
