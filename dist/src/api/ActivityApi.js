@@ -267,29 +267,6 @@ var ActivityApi = (function () {
          *
          * @param input
          */
-    ActivityApi.prototype.getActivityPreview = /**
-         *
-         * @param input
-         */
-    function (input, extraHttpRequestParams) {
-        return this.getActivityPreviewWithHttpInfo(input, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json() || {};
-            }
-        });
-    };
-    /**
-     *
-     * @param input
-     */
-    /**
-         *
-         * @param input
-         */
     ActivityApi.prototype.getActivityRatings = /**
          *
          * @param input
@@ -875,53 +852,6 @@ var ActivityApi = (function () {
          */
     function (input, extraHttpRequestParams) {
         var path = this.basePath + '/api/services/app/Activity/GetActivityParticipants';
-        var queryParameters = new URLSearchParams();
-        var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // to determine the Content-Type header
-        var consumes = [
-            'application/json-patch+json',
-            'application/json',
-            'text/json',
-            'application/_*+json'
-        ];
-        // to determine the Accept header
-        var produces = [
-            'text/plain',
-            'application/json',
-            'text/json'
-        ];
-        headers.set('Content-Type', 'application/json');
-        var requestOptions = new RequestOptions({
-            method: RequestMethod.Post,
-            headers: headers,
-            body: input == null ? '' : JSON.stringify(input),
-            // https://github.com/angular/angular/issues/10612
-            search: queryParameters,
-            withCredentials: this.configuration.withCredentials
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     *
-     *
-     * @param input
-     */
-    /**
-         *
-         *
-         * @param input
-         */
-    ActivityApi.prototype.getActivityPreviewWithHttpInfo = /**
-         *
-         *
-         * @param input
-         */
-    function (input, extraHttpRequestParams) {
-        var path = this.basePath + '/api/services/app/Activity/GetActivityPreview';
         var queryParameters = new URLSearchParams();
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header

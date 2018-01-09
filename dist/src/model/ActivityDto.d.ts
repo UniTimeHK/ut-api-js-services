@@ -21,6 +21,7 @@ export interface ActivityDto {
     name?: string;
     descriptions?: Array<models.DescriptionDto>;
     location?: models.LocationDto;
+    previewToken?: string;
     ratings?: Array<models.RatingDto>;
     comments?: Array<models.CommentDto>;
     tags?: Array<models.TagDto>;

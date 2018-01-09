@@ -33,6 +33,8 @@ export interface ActivityDto {
 
     location?: models.LocationDto;
 
+    previewToken?: string;
+
     ratings?: Array<models.RatingDto>;
 
     comments?: Array<models.CommentDto>;
