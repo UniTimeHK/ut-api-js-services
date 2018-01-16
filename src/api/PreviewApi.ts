@@ -26,7 +26,7 @@ import { Configuration }                                     from '../configurat
 
 
 @Injectable()
-export class PreviewsApi {
+export class PreviewApi {
 
     protected basePath = 'https://api.unitime.hk';
     public defaultHeaders: Headers = new Headers();
@@ -63,7 +63,7 @@ export class PreviewsApi {
      * @param input 
      */
     public getActivityPreviewWithHttpInfo(input?: models.GetActivityPreviewInput, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/services/app/Previews/GetActivityPreview';
+        const path = this.basePath + '/api/services/app/Preview/GetActivityPreview';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845

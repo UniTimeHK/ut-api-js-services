@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import * as models from '../model/models';
 import { Configuration } from '../configuration';
-export declare class PreviewsApi {
+export declare class PreviewApi {
     protected http: Http;
     protected basePath: string;
     defaultHeaders: Headers;

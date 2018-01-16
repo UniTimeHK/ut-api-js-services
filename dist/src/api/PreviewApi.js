@@ -16,8 +16,8 @@ import { RequestMethod, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { BASE_PATH } from '../variables';
 import { Configuration } from '../configuration';
-var PreviewsApi = (function () {
-    function PreviewsApi(http, basePath, configuration) {
+var PreviewApi = (function () {
+    function PreviewApi(http, basePath, configuration) {
         this.http = http;
         this.basePath = 'https://api.unitime.hk';
         this.defaultHeaders = new Headers();
@@ -37,7 +37,7 @@ var PreviewsApi = (function () {
          *
          * @param input
          */
-    PreviewsApi.prototype.getActivityPreview = /**
+    PreviewApi.prototype.getActivityPreview = /**
          *
          * @param input
          */
@@ -62,13 +62,13 @@ var PreviewsApi = (function () {
          *
          * @param input
          */
-    PreviewsApi.prototype.getActivityPreviewWithHttpInfo = /**
+    PreviewApi.prototype.getActivityPreviewWithHttpInfo = /**
          *
          *
          * @param input
          */
     function (input, extraHttpRequestParams) {
-        var path = this.basePath + '/api/services/app/Previews/GetActivityPreview';
+        var path = this.basePath + '/api/services/app/Preview/GetActivityPreview';
         var queryParameters = new URLSearchParams();
         var headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // to determine the Content-Type header
@@ -99,16 +99,16 @@ var PreviewsApi = (function () {
         }
         return this.http.request(path, requestOptions);
     };
-    PreviewsApi.decorators = [
+    PreviewApi.decorators = [
         { type: Injectable },
     ];
     /** @nocollapse */
-    PreviewsApi.ctorParameters = function () { return [
+    PreviewApi.ctorParameters = function () { return [
         { type: Http, },
         { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [BASE_PATH,] },] },
         { type: Configuration, decorators: [{ type: Optional },] },
     ]; };
-    return PreviewsApi;
+    return PreviewApi;
 }());
-export { PreviewsApi };
-//# sourceMappingURL=PreviewsApi.js.map
+export { PreviewApi };
+//# sourceMappingURL=PreviewApi.js.map

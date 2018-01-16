@@ -19,10 +19,6 @@ export interface ActivityPreviewDto {
 
     location?: models.LocationDto;
 
-    ratings?: Array<models.RatingDto>;
-
-    comments?: Array<models.CommentDto>;
-
     tags?: Array<models.TagDto>;
 
     owner?: models.UserListDto;
@@ -35,7 +31,11 @@ export interface ActivityPreviewDto {
 
     privacy?: ActivityPreviewDto.PrivacyEnum;
 
-    participants?: Array<models.UserListDto>;
+    numberOfLikes?: number;
+
+    numberOfDislikes?: number;
+
+    numberOfParticipants?: number;
 
     id?: string;
 

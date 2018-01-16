@@ -13,7 +13,7 @@
 import * as models from './models';
 
 export interface GetActivityPreviewInput {
-    activityId?: models.EntityDtoGuid;
+    activityId?: string;
 
     previewToken?: string;
 
